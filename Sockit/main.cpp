@@ -4,10 +4,19 @@
 
 #pragma comment(lib,"Ws2_32.lib")
 
+#define DEF_PORT = "27015"
+
+
 using namespace std;
+
 
 int main()
 {
+
+	struct addrinfo *result = NULL, *ptr = NULL, hints;// variables
+
+	ZeroMemory(&hints, sizeof(hints));
+
 	WSAData wsdata;
 	int res=0;
 
